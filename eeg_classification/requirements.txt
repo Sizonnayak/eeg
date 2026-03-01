@@ -1,0 +1,7 @@
+numpy>=1.21
+scipy>=1.7
+matplotlib>=3.5
+mne>=1.3
+# Optional: needed only if inspecting .pth files in data_inspect.py
+# For Apple Silicon or special CUDA builds, follow PyTorch install instructions instead of pip.
+torch>=1.12
