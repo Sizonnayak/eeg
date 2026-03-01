@@ -1,0 +1,200 @@
+================================================================================
+  CLASS BALANCING WITH UNDERSAMPLING
+================================================================================
+
+EXPERIMENT: Test if balanced training data improves precision/F1
+
+STRATEGY:
+---------
+Instead of using heavy pos_weight (4-5×), physically balance training data:
+  - Undersample non-targets to 1:2 or 1:3 ratio
+  - Use mild pos_weight (1.5×)
+  - Same optimized architecture (F1=16, dropout=0.2, 50 epochs)
+
+EXPECTED OUTCOMES:
+------------------
+✓ Higher precision (fewer false positives)
+✓ Similar or slightly lower recall
+✓ Better F1 score
+✗ Might slightly reduce BAcc if too aggressive
+
+Literature: 1:2 ratio often optimal for P300 (not too aggressive)
+
+
+================================================================================
+  STEP-BY-STEP INSTRUCTIONS
+================================================================================
+
+1. ACTIVATE ENVIRONMENT
+   ---------------------
+   cd /Users/siznayak/Documents/others/MTech/EEG_Classification/P300_8subject_eegnet
+   source ../.venv/bin/activate
+
+
+2. TRY 1:2 RATIO (RECOMMENDED)
+   ---------------------------
+   python models/train_loso_undersampled.py --ratio 2
+
+   What happens:
+   - Original: ~29k train epochs (16.6% targets)
+   - After undersampling: ~16k epochs (33% targets)
+   - Keeps all targets, randomly drops ~13k non-targets
+
+   Expected:
+   - BAcc: 0.65-0.67 (similar to baseline)
+   - Precision: 0.35-0.40 (UP from 0.33)
+   - F1: 0.42-0.45 (UP from 0.40)
+
+   Runtime: ~4 minutes (faster than baseline - less data!)
+
+
+3. (OPTIONAL) TRY 1:3 RATIO (LESS AGGRESSIVE)
+   -------------------------------------------
+   python models/train_loso_undersampled.py --ratio 3
+
+   - After undersampling: ~22k epochs (25% targets)
+   - Less aggressive than 1:2
+   - May preserve more diverse non-target patterns
+
+
+================================================================================
+  WHAT TO EXPECT
+================================================================================
+
+Per-Fold Output:
+----------------
+Fold 1/8: Test Subject 1
+----------------------------------------------------------------------
+  Before undersampling: 29289 train epochs
+    Original ratio: 1:5.0
+    New ratio:      1:2.0
+    Kept 16289/29289 epochs (55.6%)
+  Test: 4200 epochs (unchanged)
+  Training undersampled EEGNet (50 epochs)...
+    Epoch 10/50: Loss = 0.3456
+    ...
+  Results:
+    BAcc:      0.598
+    F1:        0.340
+    Precision: 0.285  ← Watch this!
+    Recall:    0.410
+
+
+Comparison with Baseline:
+--------------------------
+Method              | BAcc  | F1    | Precision | Recall
+--------------------|-------|-------|-----------|--------
+Baseline (imbal.)   | 0.651 | 0.399 | 0.333     | 0.520
+Undersampled 1:2    | 0.65? | 0.42? | 0.38?     | 0.48?
+
+
+================================================================================
+  INTERPRETATION GUIDE
+================================================================================
+
+SCENARIO 1: BAcc ≈ 0.65, Precision UP, F1 UP
+---------------------------------------------
+✅ SUCCESS! Undersampling worked!
+   - Use this model in ensemble
+   - Adds diversity (balanced vs imbalanced training)
+
+
+SCENARIO 2: BAcc < 0.63, Precision UP but BAcc DOWN
+----------------------------------------------------
+⚠️  Too aggressive undersampling
+   - Lost too much non-target diversity
+   - Try --ratio 3 (less aggressive)
+   - Or stick with pos_weight approach
+
+
+SCENARIO 3: BAcc ≈ 0.65, Precision unchanged
+---------------------------------------------
+→ Neutral result
+   - Undersampling didn't help/hurt
+   - pos_weight was already handling imbalance well
+   - Can still add to ensemble for diversity
+
+
+================================================================================
+  WHY THIS MIGHT HELP
+================================================================================
+
+1. **Real Balance**: pos_weight only changes loss, undersampling actually
+   balances what model sees during training
+
+2. **Gradient Flow**: Balanced batches = more stable gradients per class
+
+3. **Representation**: With imbalanced data, non-target patterns dominate
+   weight updates. Balancing gives targets equal say.
+
+4. **Overfitting**: Fewer non-target samples = less chance to memorize
+   non-target noise patterns
+
+
+================================================================================
+  ADDING TO ENSEMBLE (IF RESULTS GOOD)
+================================================================================
+
+If undersampled model achieves BAcc ≥ 0.65:
+
+1. Results already saved with probabilities
+2. Modify ensemble.py to load 3 models:
+   - Baseline (0.651)
+   - Optimized (0.646)
+   - Undersampled (0.65?)
+
+3. Optimal weights (if all similar BAcc):
+   weights = [0.33, 0.33, 0.34]  # Equal
+   OR
+   weights = [0.40, 0.40, 0.20]  # Weight undersampled less (more variance)
+
+
+================================================================================
+  TROUBLESHOOTING
+================================================================================
+
+RuntimeError: "batch size too large"
+-------------------------------------
+Reduce batch size in config:
+  - self.batch_size = 128 → 64
+
+
+Training much faster than expected
+-----------------------------------
+✓ Normal! Undersampling reduces data by ~45%
+  - 29k → 16k epochs
+  - Faster training is expected
+
+
+Results show Recall >> Precision
+---------------------------------
+This means model still predicts too many targets
+  - Try more aggressive undersampling (--ratio 2 → --ratio 1.5)
+  - Or increase pos_weight to 2.0
+
+
+================================================================================
+  COPY-PASTE COMMANDS
+================================================================================
+
+Full workflow:
+
+cd /Users/siznayak/Documents/others/MTech/EEG_Classification/P300_8subject_eegnet
+source ../.venv/bin/activate
+
+# Try 1:2 ratio (recommended)
+python models/train_loso_undersampled.py --ratio 2
+
+# If needed, try 1:3 (less aggressive)
+python models/train_loso_undersampled.py --ratio 3
+
+
+================================================================================
+
+Ready to test? Run:
+
+python models/train_loso_undersampled.py --ratio 2
+
+Results in ~4 minutes!
+
+================================================================================
