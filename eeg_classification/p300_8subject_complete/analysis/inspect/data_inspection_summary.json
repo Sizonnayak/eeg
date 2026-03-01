@@ -1,0 +1,45 @@
+{
+  "data_dir": "/Users/siznayak/Documents/others/MTech/Dataset/p300_8subject",
+  "pattern": "*.mat",
+  "n_files": 8,
+  "fs_set": [
+    250
+  ],
+  "channel_sets_equal": true,
+  "duration_range": [
+    1423.49,
+    1433.49
+  ],
+  "flags": {
+    "any_nan": false,
+    "any_flat": false,
+    "any_saturation": true,
+    "any_notch_needed": false
+  },
+  "files": [
+    {
+      "path": "/Users/siznayak/Documents/others/MTech/Dataset/p300_8subject/P300S01.mat",
+      "ext": ".mat",
+      "fs": 250,
+      "n_channels": 8,
+      "ch_names": [
+        "FZ",
+        "CZ",
+        "P3",
+        "PZ",
+        "P4",
+        "PO7",
+        "PO8",
+        "OZ"
+      ],
+      "n_samples": 358372,
+      "duration_s": 1433.49,
+      "n_events": 21495,
+      "signal": {
+        "n_nan": 0,
+        "n_inf": 0,
+        "flat_channels": [],
+        "saturated_channels": [],
+        "mains_hz": 50,
+        "notch_ratio": 0.0,
+        "needs_notch": 

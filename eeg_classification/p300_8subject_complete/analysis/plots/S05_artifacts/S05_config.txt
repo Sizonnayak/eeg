@@ -1,0 +1,43 @@
+Subject 5 Preprocessing Configuration
+======================================================================
+
+Quality Assessment: Artifacts
+Description: Artifacts in Oz, will interpolate bad channel
+
+Filtering Parameters:
+  Notch filter (50 Hz): No
+  Highpass: 1.0 Hz
+  Lowpass: 20 Hz
+
+Bad channels (interpolated): ['Oz']
+Artifact threshold: 100 µV
+
+Results:
+  Target epochs: 3439
+  Non-target epochs: 682
+  Rejected epochs: 77
+
+P300 Peak Stats:
+  Channel  Peak Latency (ms)    Peak Amp (µV)    SNR     
+  -------- -------------------- ---------------- --------
+  P3       408.0                1.43             1.66    
+  Oz       248.0                0.65             1.56    
+  Fz       392.0                0.79             1.44    
+  Pz       412.0                0.84             1.44    
+  Cz       408.0                0.76             1.41    
+  P4       412.0                0.98             1.39    
+  PO7      408.0                0.71             1.37    
+  PO8      200.0                0.51             1.23    
+
+Best P300: P3 | 408.0ms | SNR 1.66
+
+Total plots generated: 9
+  1. S05_butterfly_erp.png - Classic ERP overlay
+  2. S05_topo_maps.png - Topographic maps
+  3. S05_butterfly_overlay.png - All-channel butterfly
+  4. S05_difference_waves.png - Target-Nontarget differences
+  5. S05_signal_quality.png - SNR and quality metrics
+  6. S05_time_frequency.png - Spectrograms
+  7. S05_channel_p300_amplitude.png - P300 amplitude bars
+  8. S05_peak_stats_table.png - P300 peak statistics table
+  9. S05_config.txt - This file

@@ -1,0 +1,43 @@
+Subject 1 Preprocessing Configuration
+======================================================================
+
+Quality Assessment: Clean
+Description: High quality data, conservative filtering
+
+Filtering Parameters:
+  Notch filter (50 Hz): No
+  Highpass: 0.5 Hz
+  Lowpass: 20 Hz
+
+Bad channels (interpolated): None
+Artifact threshold: 150 µV
+
+Results:
+  Target epochs: 3500
+  Non-target epochs: 700
+  Rejected epochs: 0
+
+P300 Peak Stats:
+  Channel  Peak Latency (ms)    Peak Amp (µV)    SNR     
+  -------- -------------------- ---------------- --------
+  PO7      208.0                1.62             2.42    
+  Oz       208.0                1.86             2.42    
+  Fz       236.0                1.38             2.25    
+  Cz       236.0                1.61             2.23    
+  PO8      212.0                1.94             2.23    
+  P3       208.0                1.58             2.17    
+  Pz       212.0                1.80             2.08    
+  P4       216.0                1.97             1.99    
+
+Best P300: PO7 | 208.0ms | SNR 2.42
+
+Total plots generated: 9
+  1. S01_butterfly_erp.png - Classic ERP overlay
+  2. S01_topo_maps.png - Topographic maps
+  3. S01_butterfly_overlay.png - All-channel butterfly
+  4. S01_difference_waves.png - Target-Nontarget differences
+  5. S01_signal_quality.png - SNR and quality metrics
+  6. S01_time_frequency.png - Spectrograms
+  7. S01_channel_p300_amplitude.png - P300 amplitude bars
+  8. S01_peak_stats_table.png - P300 peak statistics table
+  9. S01_config.txt - This file

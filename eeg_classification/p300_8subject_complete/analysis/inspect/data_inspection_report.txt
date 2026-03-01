@@ -1,0 +1,244 @@
+============================================================
+  EEG Dataset Inspection Report
+============================================================
+  Directory : /Users/siznayak/Documents/others/MTech/Dataset/p300_8subject
+  Pattern   : *.mat
+  Files     : 8
+============================================================
+
+  File 1  |  Metadata: {'path': '/Users/siznayak/Documents/others/MTech/Dataset/p300_8subject/P300S01.mat', 'ext': '.mat', 'Trials': 35, 'Word': 'TOKENMIRARJUJUYMANSOCINCOJUEGOQUESO', 'subject': 1}
+------------------------------------------------------------
+    Sampling rate      : 250 Hz
+    Channels (8)     : ['FZ', 'CZ', 'P3', 'PZ', 'P4', 'PO7', 'PO8', 'OZ']
+    Recording length   : 358372 samples  (1433.49 s)
+    NaN / Inf          : 0 / 0  [OK]
+    Flat channels      : None  [OK]
+    Saturated (>500µV) : None  [OK]
+        FZ  range [  -172.1,   +160.2] µV  |  var    302.8 µV²
+        CZ  range [  -170.7,   +147.9] µV  |  var    135.1 µV²
+        P3  range [   -71.8,    +68.0] µV  |  var     83.3 µV²
+        PZ  range [  -147.8,   +125.0] µV  |  var     95.3 µV²
+        P4  range [  -109.4,    +88.4] µV  |  var     78.4 µV²
+       PO7  range [   -64.6,    +66.6] µV  |  var     60.9 µV²
+       PO8  range [   -87.5,    +96.2] µV  |  var     82.7 µV²
+        OZ  range [   -81.2,    +91.1] µV  |  var     73.4 µV²
+    Total events       : 21495
+    Event table columns: 3
+      Col 0  |  11813 unique  |  range [0.24, 1434.36]  |  values: [0.2431640625, 7.4072265625, 7.4111328125, 7.66796875, 7.671875] ...
+      Col 1  |  25 unique  |  range [897.0, 33286.0]  |  values: [897.0, 898.0, 32769.0, 32771.0, 32772.0] ...
+      Col 2  |  3 unique  |  range [0.0, 0.01]  |  values: [0.0, 0.00390625, 0.0078125]
+    Mains (50 Hz) ratio : 0.0x  [OK]  
+    Alpha peak present : No
+    Simultaneous events: 9679
+    Inter-event mean   : 0.27 ms  |  max: 31.95 ms
+    Timing jitter (std): 1.14 ms  [OK]
+
+  File 2  |  Metadata: {'path': '/Users/siznayak/Documents/others/MTech/Dataset/p300_8subject/P300S02.mat', 'ext': '.mat', 'Trials': 35, 'Word': 'TOKENMIRARJUJUYMANSOCINCOJUEGOQUESO', 'subject': 2}
+------------------------------------------------------------
+    Sampling rate      : 250 Hz
+    Channels (8)     : ['FZ', 'CZ', 'P3', 'PZ', 'P4', 'PO7', 'PO8', 'OZ']
+    Recording length   : 355904 samples  (1423.62 s)
+    NaN / Inf          : 0 / 0  [OK]
+    Flat channels      : None  [OK]
+    Saturated (>500µV) : None  [OK]
+        FZ  range [  -191.9,   +252.4] µV  |  var    348.1 µV²
+        CZ  range [  -106.0,   +117.6] µV  |  var    108.2 µV²
+        P3  range [  -140.1,   +178.9] µV  |  var    666.9 µV²
+        PZ  range [   -97.3,    +94.9] µV  |  var     93.4 µV²
+        P4  range [   -86.9,    +86.9] µV  |  var     92.4 µV²
+       PO7  range [   -90.0,    +80.3] µV  |  var    110.8 µV²
+       PO8  range [   -76.9,    +64.5] µV  |  var     69.3 µV²
+        OZ  range [  -272.1,   +294.0] µV  |  var    147.1 µV²
+    Total events       : 21398
+    Event table columns: 3
+      Col 0  |  11699 unique  |  range [0.12, 1423.49]  |  values: [0.119140625, 0.37109375, 0.4951171875, 0.7470703125, 1.1279296875] ...
+      Col 1  |  26 unique  |  range [897.0, 33286.0]  |  values: [897.0, 898.0, 32769.0, 32770.0, 32771.0] ...
+      Col 2  |  3 unique  |  range [0.0, 0.01]  |  values: [0.0, 0.00390625, 0.0078125]
+    Mains (50 Hz) ratio : 0.0x  [OK]  
+    Alpha peak present : No
+    Simultaneous events: 9694
+    Inter-event mean   : 0.27 ms  |  max: 35.31 ms
+    Timing jitter (std): 1.26 ms  [OK]
+
+  File 3  |  Metadata: {'path': '/Users/siznayak/Documents/others/MTech/Dataset/p300_8subject/P300S03.mat', 'ext': '.mat', 'Trials': 35, 'Word': 'TOKENMIRARJUJUYMANSOCINCOJUEGOQUESO', 'subject': 3}
+------------------------------------------------------------
+    Sampling rate      : 250 Hz
+    Channels (8)     : ['FZ', 'CZ', 'P3', 'PZ', 'P4', 'PO7', 'PO8', 'OZ']
+    Recording length   : 355872 samples  (1423.49 s)
+    NaN / Inf          : 0 / 0  [OK]
+    Flat channels      : None  [OK]
+    Saturated (>500µV) : ['P4', 'PO8']  [FLAG]
+        FZ  range [   -72.5,    +98.9] µV  |  var    182.3 µV²
+        CZ  range [   -62.4,    +79.1] µV  |  var    110.1 µV²
+        P3  range [   -64.0,    +71.5] µV  |  var     97.0 µV²
+        PZ  range [   -64.2,    +71.2] µV  |  var     97.2 µV²
+        P4  range [ -1574.1,  +3824.6] µV  |  var   1701.1 µV²
+       PO7  range [   -87.8,    +77.6] µV  |  var     68.8 µV²
+       PO8  range [ -1303.5,  +1101.8] µV  |  var    418.5 µV²
+        OZ  range [   -47.7,    +62.5] µV  |  var     48.6 µV²
+    Total events       : 21456
+    Event table columns: 3
+      Col 0  |  11917 unique  |  range [7.06, 1423.48]  |  values: [7.0634765625, 7.0673828125, 7.1953125, 7.19921875, 7.3271484375] ...
+      Col 1  |  26 unique  |  range [897.0, 33286.0]  |  values: [897.0, 898.0, 32769.0, 32770.0, 32771.0] ...
+      Col 2  |  3 unique  |  range [0.0, 0.01]  |  values: [0.0, 0.00390625, 0.0078125]
+    Mains (50 Hz) ratio : 0.0x  [OK]  
+    Alpha peak present : No
+    Simultaneous events: 9531
+    Inter-event mean   : 0.26 ms  |  max: 31.93 ms
+    Timing jitter (std): 1.44 ms  [OK]
+
+  File 4  |  Metadata: {'path': '/Users/siznayak/Documents/others/MTech/Dataset/p300_8subject/P300S04.mat', 'ext': '.mat', 'Trials': 35, 'Word': 'TOKENMIRARJUJUYMANSOCINCOJUEGOQUESO', 'subject': 4}
+------------------------------------------------------------
+    Sampling rate      : 250 Hz
+    Channels (8)     : ['FZ', 'CZ', 'P3', 'PZ', 'P4', 'PO7', 'PO8', 'OZ']
+    Recording length   : 355872 samples  (1423.49 s)
+    NaN / Inf          : 0 / 0  [OK]
+    Flat channels      : None  [OK]
+    Saturated (>500µV) : ['PO8']  [FLAG]
+        FZ  range [   -70.6,    +63.6] µV  |  var     98.9 µV²
+        CZ  range [  -137.6,   +258.7] µV  |  var    122.6 µV²
+        P3  range [   -61.1,    +59.4] µV  |  var    120.9 µV²
+        PZ  range [   -61.0,    +60.5] µV  |  var    125.0 µV²
+        P4  range [   -91.7,   +128.4] µV  |  var    118.0 µV²
+       PO7  range [   -78.1,    +77.1] µV  |  var    100.7 µV²
+       PO8  range [ -1514.8,  +1780.4] µV  |  var   1627.6 µV²
+        OZ  range [   -67.6,    +91.3] µV  |  var     67.7 µV²
+    Total events       : 21482
+    Event table columns: 3
+      Col 0  |  11936 unique  |  range [0.53, 1423.48]  |  values: [0.52734375, 12.68359375, 12.6875, 12.943359375, 12.947265625] ...
+      Col 1  |  26 unique  |  range [897.0, 33286.0]  |  values: [897.0, 898.0, 32769.0, 32770.0, 32771.0] ...
+      Col 2  |  3 unique  |  range [0.0, 0.01]  |  values: [0.0, 0.00390625, 0.0078125]
+    Mains (50 Hz) ratio : 0.0x  [OK]  
+    Alpha peak present : Yes
+    Simultaneous events: 9541
+    Inter-event mean   : 0.26 ms  |  max: 48.62 ms
+    Timing jitter (std): 1.3 ms  [OK]
+
+  File 5  |  Metadata: {'path': '/Users/siznayak/Documents/others/MTech/Dataset/p300_8subject/P300S05.mat', 'ext': '.mat', 'Trials': 35, 'Word': 'TOKENMIRARJUJUYMANSOCINCOJUEGOQUESO', 'subject': 5}
+------------------------------------------------------------
+    Sampling rate      : 250 Hz
+    Channels (8)     : ['FZ', 'CZ', 'P3', 'PZ', 'P4', 'PO7', 'PO8', 'OZ']
+    Recording length   : 355904 samples  (1423.62 s)
+    NaN / Inf          : 0 / 0  [OK]
+    Flat channels      : None  [OK]
+    Saturated (>500µV) : ['OZ']  [FLAG]
+        FZ  range [   -79.6,   +129.0] µV  |  var    122.0 µV²
+        CZ  range [   -59.4,    +90.8] µV  |  var     97.2 µV²
+        P3  range [   -93.2,   +151.5] µV  |  var    123.1 µV²
+        PZ  range [  -289.8,   +192.2] µV  |  var    136.2 µV²
+        P4  range [   -65.8,    +65.7] µV  |  var     81.1 µV²
+       PO7  range [  -201.9,   +190.1] µV  |  var    137.8 µV²
+       PO8  range [  -440.2,   +370.4] µV  |  var    536.3 µV²
+        OZ  range [  -981.4,   +436.3] µV  |  var   1241.8 µV²
+    Total events       : 21514
+    Event table columns: 3
+      Col 0  |  11717 unique  |  range [3.61, 1423.49]  |  values: [3.611328125, 7.703125, 7.70703125, 7.8359375, 7.83984375] ...
+      Col 1  |  26 unique  |  range [897.0, 33286.0]  |  values: [897.0, 898.0, 32769.0, 32770.0, 32771.0] ...
+      Col 2  |  3 unique  |  range [0.0, 0.01]  |  values: [0.0, 0.00390625, 0.0078125]
+    Mains (50 Hz) ratio : 0.0x  [OK]  
+    Alpha peak present : No
+    Simultaneous events: 9794
+    Inter-event mean   : 0.26 ms  |  max: 31.98 ms
+    Timing jitter (std): 1.4 ms  [OK]
+
+  File 6  |  Metadata: {'path': '/Users/siznayak/Documents/others/MTech/Dataset/p300_8subject/P300S06.mat', 'ext': '.mat', 'Trials': 35, 'Word': 'TOKENMIRARJUJUYMANSOCINCOJUEGOQUESO', 'subject': 6}
+------------------------------------------------------------
+    Sampling rate      : 250 Hz
+    Channels (8)     : ['FZ', 'CZ', 'P3', 'PZ', 'P4', 'PO7', 'PO8', 'OZ']
+    Recording length   : 355872 samples  (1423.49 s)
+    NaN / Inf          : 0 / 0  [OK]
+    Flat channels      : None  [OK]
+    Saturated (>500µV) : None  [OK]
+        FZ  range [   -66.4,    +77.5] µV  |  var    126.2 µV²
+        CZ  range [   -81.7,    +73.2] µV  |  var    160.5 µV²
+        P3  range [   -77.9,    +85.2] µV  |  var    179.8 µV²
+        PZ  range [   -90.4,    +95.5] µV  |  var    204.2 µV²
+        P4  range [   -80.5,    +84.9] µV  |  var    157.4 µV²
+       PO7  range [   -92.8,   +125.3] µV  |  var    173.7 µV²
+       PO8  range [   -84.9,    +80.0] µV  |  var    104.9 µV²
+        OZ  range [   -63.3,    +63.6] µV  |  var     94.0 µV²
+    Total events       : 21438
+    Event table columns: 3
+      Col 0  |  11879 unique  |  range [8.04, 1423.44]  |  values: [8.03515625, 8.0390625, 8.2958984375, 8.2998046875, 8.427734375] ...
+      Col 1  |  26 unique  |  range [897.0, 33286.0]  |  values: [897.0, 898.0, 32769.0, 32770.0, 32771.0] ...
+      Col 2  |  3 unique  |  range [0.0, 0.01]  |  values: [0.0, 0.00390625, 0.0078125]
+    Mains (50 Hz) ratio : 0.0x  [OK]  
+    Alpha peak present : Yes
+    Simultaneous events: 9555
+    Inter-event mean   : 0.26 ms  |  max: 31.93 ms
+    Timing jitter (std): 1.37 ms  [OK]
+
+  File 7  |  Metadata: {'path': '/Users/siznayak/Documents/others/MTech/Dataset/p300_8subject/P300S07.mat', 'ext': '.mat', 'Trials': 35, 'Word': 'TOKENMIRARJUJUYMANSOCINCOJUEGOQUESO', 'subject': 7}
+------------------------------------------------------------
+    Sampling rate      : 250 Hz
+    Channels (8)     : ['FZ', 'CZ', 'P3', 'PZ', 'P4', 'PO7', 'PO8', 'OZ']
+    Recording length   : 355872 samples  (1423.49 s)
+    NaN / Inf          : 0 / 0  [OK]
+    Flat channels      : None  [OK]
+    Saturated (>500µV) : None  [OK]
+        FZ  range [  -207.8,   +122.5] µV  |  var    218.4 µV²
+        CZ  range [  -114.4,    +85.9] µV  |  var    155.9 µV²
+        P3  range [   -86.1,    +77.2] µV  |  var    148.4 µV²
+        PZ  range [   -96.9,    +74.8] µV  |  var    165.2 µV²
+        P4  range [  -102.0,    +70.5] µV  |  var    140.2 µV²
+       PO7  range [   -72.3,    +79.3] µV  |  var    139.9 µV²
+       PO8  range [   -89.4,    +70.6] µV  |  var    132.3 µV²
+        OZ  range [   -68.2,    +74.8] µV  |  var    120.3 µV²
+    Total events       : 21532
+    Event table columns: 3
+      Col 0  |  11922 unique  |  range [11.04, 1423.46]  |  values: [11.043945313, 11.047851563, 11.303710938, 11.307617188, 11.435546875] ...
+      Col 1  |  26 unique  |  range [897.0, 33286.0]  |  values: [897.0, 898.0, 32769.0, 32770.0, 32771.0] ...
+      Col 2  |  3 unique  |  range [0.0, 0.01]  |  values: [0.0, 0.00390625, 0.0078125]
+    Mains (50 Hz) ratio : 0.0x  [OK]  
+    Alpha peak present : No
+    Simultaneous events: 9606
+    Inter-event mean   : 0.26 ms  |  max: 31.95 ms
+    Timing jitter (std): 1.28 ms  [OK]
+
+  File 8  |  Metadata: {'path': '/Users/siznayak/Documents/others/MTech/Dataset/p300_8subject/P300S08.mat', 'ext': '.mat', 'Trials': 35, 'Word': 'TOKENMIRARJUJUYMANSOCINCOJUEGOQUESO', 'subject': 8}
+------------------------------------------------------------
+    Sampling rate      : 250 Hz
+    Channels (8)     : ['FZ', 'CZ', 'P3', 'PZ', 'P4', 'PO7', 'PO8', 'OZ']
+    Recording length   : 355904 samples  (1423.62 s)
+    NaN / Inf          : 0 / 0  [OK]
+    Flat channels      : None  [OK]
+    Saturated (>500µV) : None  [OK]
+        FZ  range [  -251.0,   +223.2] µV  |  var    376.8 µV²
+        CZ  range [  -214.9,   +172.5] µV  |  var    212.1 µV²
+        P3  range [  -165.8,   +121.2] µV  |  var    135.7 µV²
+        PZ  range [  -182.4,   +133.1] µV  |  var    157.8 µV²
+        P4  range [  -191.9,   +138.1] µV  |  var    140.4 µV²
+       PO7  range [  -154.0,   +109.1] µV  |  var    122.8 µV²
+       PO8  range [  -189.1,   +136.6] µV  |  var    136.2 µV²
+        OZ  range [  -120.0,   +135.3] µV  |  var    101.1 µV²
+    Total events       : 21628
+    Event table columns: 3
+      Col 0  |  12009 unique  |  range [0.0, 1423.6]  |  values: [0.00390625, 0.0078125, 0.263671875, 0.267578125, 0.3955078125] ...
+      Col 1  |  26 unique  |  range [897.0, 33286.0]  |  values: [897.0, 898.0, 32769.0, 32770.0, 32771.0] ...
+      Col 2  |  3 unique  |  range [0.0, 0.01]  |  values: [0.0, 0.00390625, 0.0078125]
+    Mains (50 Hz) ratio : 0.0x  [OK]  
+    Alpha peak present : No
+    Simultaneous events: 9616
+    Inter-event mean   : 0.26 ms  |  max: 37.36 ms
+    Timing jitter (std): 1.29 ms  [OK]
+
+============================================================
+  Cross-File Consistency
+============================================================
+    Sampling rates     : {250}  [OK]
+    Channel sets       : [OK]
+    Duration range     : 1423.49–1433.49 s
+
+
+    NaN/Inf anywhere   : No
+    Flat channels      : No
+    Saturation         : Yes
+    Notch filter needed: No
+
+============================================================
+  Discovered Configuration
+============================================================
+    FS          = 250
+    CH_NAMES    = ['FZ', 'CZ', 'P3', 'PZ', 'P4', 'PO7', 'PO8', 'OZ']
+    N_FILES     = 8
+============================================================
